@@ -10,6 +10,7 @@ import About from './components/About';
 import Services from './components/Services';
 import AppointmentSection from './components/Appointment';
 import CustomerReviews from './components/CustomerReviews';
+import Home from './Pages/Home';
 
 function App() {
   return (
@@ -17,16 +18,7 @@ function App() {
       <Navbars />
       <Routes>
         {/* Define your routes here */}
-        <Route path="/" element={
-          <>
-            <Banner />
-            <Header />
-            <PrakritiIntroSection />
-            <About />
-            <Services />
-            <AppointmentSection />
-            <CustomerReviews />
-          </>
+        <Route path="/" element={<Home/>
         } />
         {/* Example: If you want a separate route for Banner */}
         {/* <Route path="/banner" element={<Banner />} /> */}
