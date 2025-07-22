@@ -1,0 +1,341 @@
+
+
+
+/* Navabrs */
+.header-container {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-left .logo {
+  max-height: 70px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #007b5e;
+  text-decoration: underline;
+}
+
+.consult-btn {
+  background-color: #007b5e;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.consult-btn:hover {
+  background-color: #005b46;
+}
+
+/* Responsive - Mobile View */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .header-right {
+    margin-top: 10px;
+  }
+}
+
+/* Custom toggle button style */
+.custom-toggler {
+  background-color: green; /* Green background */
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* White hamburger icon */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.nav-item{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.online-btn {
+  background-color: #b0d152 !important;
+  color: white !important;
+  font-weight: 600 !important;
+  border-radius: 4px;
+  border: 1px solid #b0d152;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.online-btn:hover {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid #b0d152 !important;
+  text-decoration: none;
+}
+
+/* Base nav link style */
+.nav-link {
+  color: black;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+
+/* Bottom black border on hover */
+.nav-link:hover {
+  border-bottom: 1px solid black;
+  
+}
+
+/* Active link — green bottom border */
+.nav-link.active-link:hover {
+  border-bottom: 1px solid #b0d152;
+}
+
+/* Banner.css */
+.carousel-image {
+  width: 100%;
+  height: 100vh;            /* Full viewport height */
+  object-fit: cover;        /* Ensures image fills the box without distortion */
+}
+
+.carousel-indicators {
+  bottom: 15px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* .carousel-background {
+  width: 100%;
+  height: 70vh; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+/* .carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
+
+/* inro section */
+
+.welcome{
+  color: #90A93E;
+  font-family: "Alex Brush", Sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.eb-garamond{
+  font-family: "EB Garamond", Sans-serif;
+}
+.work-sans{
+  font-family:" Work Sans", Sans-serif;
+}
+/* about */
+.elementskit-info-box-title {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "EB Garamond", serif;
+}
+
+.elementskit-box-style-content {
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* Image zoom effect */
+.image-hover-container {
+  transition: all 0.3s ease-in-out;
+}
+
+.zoom-image {
+  transition: transform 0.4s ease;
+}
+
+.image-hover-container:hover .zoom-image {
+  transform: scale(1.05);
+}
+
+/* Change heading color on hover */
+.image-hover-container:hover .hover-change {
+  color: #90A93E; /* You can use any custom color */
+}
+
+/* Appoinment section */
+.appoinment{
+  background-image: url("./Images/bs-cta-image-min.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.full{
+  padding: 155px 0px 150px 0px;
+}
+.appoinment {
+  background-image: url("./Images//bs-cta-image-min.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.appoinment::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55); /* Black overlay with opacity */
+  z-index: -1;
+}
+
+.appoinment h2,
+.appoinment h5,
+.appoinment p,
+.appoinment a {
+  color: #fff !important; /* Ensures white text over dark background */
+}
+.subtitle{
+    color: #FFFFFF;
+    font-family: "Alex Brush", Sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0px 0px 30px 0px;
+}
+.title{
+  color: #FFFFFF;
+    margin: 0px 0px 45px 0px;
+    font-family: "EB Garamond", Sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+/* customer reviews */
+
+.reviews-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.review-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  width: 300px;
+  position: relative;
+}
+
+.avatar-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -40px;
+  border: 3px solid white;
+  z-index: 1;
+}
+
+.google-logo {
+  position: absolute;
+  width: 20px;
+  bottom: 0;
+  right: -10px;
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+h4 {
+  margin: 10px 0 5px;
+}
+
+.date {
+  color: gray;
+  font-size: 0.9em;
+}
+
+.stars {
+  color: #f4c150;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.verified {
+  color: #1877f2;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+.text {
+  color: #333;
+  font-size: 0.95em;
+}
