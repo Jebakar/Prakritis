@@ -1,0 +1,93 @@
+.booking-section {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.booking-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.booking-form-column,
+.contact-info-column {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.booking-form textarea {
+  min-height: 100px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.icon-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.icon {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.content h6 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.content p {
+  margin: 0;
+  color: #666;
+}
+
+.left {
+  display: inline-block;
+  width: 100px;
+}
+
+.right {
+  display: inline-block;
+}
+
+.treatment-group {
+  display: none;
+}
+
+/* Show the relevant treatment group based on selection */
+/* You'll need to implement this logic with JavaScript */
