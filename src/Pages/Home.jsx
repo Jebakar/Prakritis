@@ -7,6 +7,7 @@ import AppointmentSection from '../components/Appointment'
 import CustomerReviews from '../components/CustomerReviews'
 import Services from '../components/Services'
 import IMages from '../components/images'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -19,8 +20,9 @@ const Home = () => {
             <AppointmentSection />
             <CustomerReviews/>
             <IMages />
+            <Footer /> 
         
-    </div>
+    </div> 
   )
 }
 

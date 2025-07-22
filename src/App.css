@@ -339,3 +339,72 @@ h4 {
   color: #333;
   font-size: 0.95em;
 }
+
+/* footer */
+.custom-footer-bg {
+  background-color: #14261c;
+  font-family: 'Inter', sans-serif;
+}
+.custom-footer-bg a {
+  text-decoration: none;
+  color: white;
+}
+.custom-footer-bg ul li {
+  margin-bottom: 10px; /* adjust as needed */
+}
+
+/* Add this in App.css or Services.css */
+.animate__animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+/* Swasthasya section */
+.section-wrapper {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+/* .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1 1 50%;
+} */
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sanskrit-quote {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #205b4f;
+}
+
+.icon-wrapper {
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #444;
+}
+
+.responsive-img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* about us */
+.aboutus{
+  background-image: url("./Images//bg.jpeg");
+  background-repeat: no-repeat;
+ 
+}

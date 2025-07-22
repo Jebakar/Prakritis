@@ -1,7 +1,23 @@
 import React from "react";
 import Logo from "../Images/prakriti-logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Navbars() {
+  const navigate=useNavigate();
+const path = (item) => {
+  switch(item) {
+    case "HOME": return "/";
+    case "ABOUT": return "/about";
+    case "OUR TEAM": return "/team";
+    case "SERVICES": return "/services";
+    case "GALLERY": return "/gallery";
+    case "BLOG": return "/blog";
+    case "CONTACT": return "/contact";
+    case "BOOK NOW": return "/book";
+    default: return "/";
+  }
+}
+
   return (
     <>
       {/* Top Line */}
@@ -58,13 +74,18 @@ function Navbars() {
             <ul className="nav flex-column flex-md-row mx-auto text-center">
               {["HOME", "ABOUT", "OUR TEAM", "SERVICES", "GALLERY", "BLOG", "CONTACT", "BOOK NOW"].map((item) => (
                <li className="nav-item" key={item}>
-              <a
-              className={`nav-link px-2 ${item === "HOME" ? "active-link" : ""}`}
-             href="#"
-             style={{ color: item === "HOME" ? "#b0d152" : "black", fontWeight: "600" }}
-              >
-                {item}
-            </a>
+            <a
+  href="#"
+  className={`nav-link px-2 ${item === "HOME" ? "active-link" : ""}`}
+  onClick={(e) => {
+    e.preventDefault();
+    navigate(path(item));
+  }}
+  style={{ color: item === "HOME" ? "#b0d152" : "black", fontWeight: "600" }}
+>
+  {item}
+</a>
+
 
              </li>
                ))}

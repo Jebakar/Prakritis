@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function AppointmentSection() {
   return (
-    <section className="py-5 bg-light text-center appoinment">
+    <section className="py-5 bg-light text-center appoinment animate__animated animate__fadeInUp">
       <div className="container full">
         <div className="row justify-content-center mb-3">
           <div className="col-lg-8">
