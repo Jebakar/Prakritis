@@ -1,6 +1,6 @@
 import React from "react";
-import aboutImg from "./Images/About.jpg";
-import what from "./Images/what we.jpg";
+import aboutImg from "../Images/About.jpg";
+import what from "../Images/what we.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function About() {

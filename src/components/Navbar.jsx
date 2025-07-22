@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "./Images/prakriti-logo.png";
+import Logo from "../Images/prakriti-logo.png";
 
 function Navbars() {
   return (

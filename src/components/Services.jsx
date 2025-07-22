@@ -1,11 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Abhyanga from "./Images/Abhyanga.jpg"
-import Abhyangastream from "./Images/Abhyanga-with-Steam.jpeg";
-import Abhyangasirodhara from "./Images/Abhyanga-with-sirodhara.png"
-import pada from "./Images/Pada-Abhyanga.png";
-import Varnya from "./Images/Varnya.png";
-import Dandruff from "./Images/Dandruff-Hairfall.png";
+import Abhyanga from "../Images/Abhyanga.jpg"
+import Abhyangastream from "../Images/Abhyanga-with-Steam.jpeg";
+import Abhyangasirodhara from "../Images/Abhyanga-with-sirodhara.png"
+import pada from "../Images/Pada-Abhyanga.png";
+import Varnya from "../Images/Varnya.png";
+import Dandruff from "../Images/Dandruff-Hairfall.png";
 
 const treatments = [
   {

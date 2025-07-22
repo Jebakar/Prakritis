@@ -1,9 +1,9 @@
 import React from "react";
-import banner1 from "./Images/banner-01-cropped.jpg";
-import banner2 from "./Images/banner-02.png";
-import banner3 from "./Images/banner-03.png";
-import banner4 from "./Images/banner-04.jpg";
-import banner5 from "./Images/banner-05.jpg";
+import banner1 from "../Images/banner-01-cropped.jpg";
+import banner2 from "../Images/banner-02.png";
+import banner3 from "../Images/banner-03.png";
+import banner4 from "../Images/banner-04.jpg";
+import banner5 from "../Images/banner-05.jpg";
 import "animate.css";
 
 function Banner() {

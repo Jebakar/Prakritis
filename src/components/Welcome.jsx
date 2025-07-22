@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import bs from "./Images/bs-banner-t-icon-1.png"
+import bs from "../Images/bs-banner-t-icon-1.png"
 const PrakritiIntroSection = () => {
   return (
     <section className="py-5 bg-light text-center animate__animated animate__fadeInUp">
