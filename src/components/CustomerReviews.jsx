@@ -12,8 +12,8 @@ const slides = [
   { id: "slide2", image: review2, name: "Partha Sarathy", date: "2022-05-16",content :"Good hospitality" },
   { id: "slide3", image: review3, name: "Aneesh Deepak", date: "2022-02-19" , content :"Excellent service and value for money" },
   { id: "slide4", image: review4, name: "Sivaganesh Rajagopal", date: "2022-01-22" ,content :"Great Doctor, wonderful and warm experience from start to finish." },
-  { id: "slide5", image: review5, name: "Sijo Thomas", date: "2022-07-24" },
-  { id: "slide6", image: review6, name: "Crazyy Ind", date: "2022-12-31" },
+  { id: "slide5", image: review5, name: "Sijo Thomas", date: "2022-07-24" ,content :"Very good treatment 👍👍👍" },
+  { id: "slide6", image: review6, name: "Crazyy Ind", date: "2022-12-31" ,content: "Good Ayurveda clinic"},
 ];
 
 const groupSlides = (slides, chunkSize = 3) => { 
@@ -88,7 +88,7 @@ const CustomerReviews = () => {
                               className="ti-verified-tooltip"
                               style={{ width: "195px" }}
                             >
-                              Trustindex verifies that the original source of the review is Google.
+                             {slide.content}
                             </span>
                           </div>
                         </div>
