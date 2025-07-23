@@ -31,7 +31,7 @@ function Navbars() {
     "BOOK NOW",
   ];
 
-  return (
+  return ( 
     <>
       {/* Top Line */}
       <div style={{ backgroundColor: "lightgray", height: "1px", width: "100%" }}></div>
@@ -44,11 +44,11 @@ function Navbars() {
           <div className="me-3">
             <a href="/">
               <img
-                src={Logo}
+                src={Logo} 
                 alt="Prakriti Ayurveda"
-                width="200"
-                height="70"
-                className="img-fluid"
+                width="200" 
+                height="70" 
+                className="img-fluid" 
                 style={{ maxWidth: "190px" }}
               />
             </a>

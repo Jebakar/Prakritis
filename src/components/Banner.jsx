@@ -3,7 +3,7 @@ import banner1 from "../Images/banner-01-cropped.jpg";
 import banner2 from "../Images/banner-02.png";
 import banner3 from "../Images/banner-03.png";
 import banner4 from "../Images/banner-04.jpg";
-import banner5 from "../Images/banner-05.jpg";
+import banner5 from  "../Images/Banner-05.jpg";
 import "animate.css";
 
 function Banner() {
@@ -68,7 +68,7 @@ function Banner() {
                   <div className="elementor-slide-description" style={{ fontSize: "1.2rem", margin: "1rem 0" }}>
                     "We are authorized dealers of medicines of Kottakkal Arya Vaidya Sala"
                   </div>
-                  <a href="https://prakritiayurveda.com/book-now/" className="btn btn-light bg-transparent text-white">
+                  <a href="" className="btn btn-light bg-transparent text-white">
                     Book Now
                   </a>
                 </div>

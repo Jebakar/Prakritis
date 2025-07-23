@@ -402,9 +402,141 @@ h4 {
   border-radius: 10px;
 }
 
-/* about us */
-.aboutus{
-  background-image: url("./Images//bg.jpeg");
+/* about us */ 
+.aboutus{ 
+  background-image: url("./Images//bg.jpeg");  
+  background-repeat: no-repeat; 
+} 
+
+/* Our team */
+.team-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+  width: 100%;
+  /* height: 300px; */
+  object-fit: cover;
+}
+
+.team-content {
+  background-color: #fff;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.team-card:hover .team-content {
+  background-color: #90A93E; /* Light herbal green shade */
+  color: white;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: black;
+  color:white;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.15) rotate(10deg);
+  color: #fff;
+}
+
+/* Platform-specific colors on hover */
+.social-icon.facebook:hover {
+  background-color: #3b5998;
+}
+.social-icon.twitter:hover {
+  background-color: #1da1f2;
+}
+.social-icon.instagram:hover {
+  background-color: #e4405f;
+}
+.social-icon.whatsapp:hover {
+  background-color: #25d366;
+}
+
+/* services */
+.serimg{
+  background-image: url("./Images//servicehead.jpg");
+  background-size: cover;
+  /* background-position: center; */
   background-repeat: no-repeat;
- 
+  /* min-height: 400px;  */
+  background-position: top center;
+}
+
+.therapy-card {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper {
+  overflow: hidden;
+}
+
+.therapy-img {
+  transition: transform 0.3s ease;
+}
+
+.therapy-title {
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.therapy-card:hover .therapy-img {
+  transform: scale(1.1);
+}
+
+.therapy-card:hover .therapy-title {
+  color: #D49C75; /* Change this color as desired */
+}
+
+/* special treatments */
+.treatment-card {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.treatment-img {
+  transition: transform 0.4s ease;
+}
+
+.treatment-card:hover .treatment-img {
+  transform: scale(1.05);
+}
+
+.treatment-title {
+  transition: color 0.3s ease;
+}
+
+.treatment-card:hover .treatment-title {
+  color: #D49C75; /* Green shade or customize as needed */
+}
+
+/* gallery section */
+.gallery-section img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-section img:hover {
+  transform: scale(1.05);
+}
+/* Anna nagar gallery section */
+.anna-nagar-gallery img {
+  transition: transform 0.3s ease;
+}
+
+.anna-nagar-gallery img:hover {
+  transform: scale(1.05);
 }

@@ -4,7 +4,7 @@ import "animate.css";
 
 import Abhyanga from "../Images/Abhyanga.jpg";
 import Abhyangastream from "../Images/Abhyanga-with-Steam.jpeg";
-import Abhyangasirodhara from "../Images/Abhyanga-with-sirodhara.png";
+import Abhyangasirodhara from "../Images/Abhyanga-with-Sirodhara.png";
 import pada from "../Images/Pada-Abhyanga.png";
 import Varnya from "../Images/Varnya.png";
 import Dandruff from "../Images/Dandruff-Hairfall.png";
@@ -55,8 +55,8 @@ const treatments = [
   },
 ];
 
-function Services() {
-  return (
+function Services() { 
+  return ( 
     <section className="py-5 bg-light">
       <div className="container">
         {/* Heading Section */}
