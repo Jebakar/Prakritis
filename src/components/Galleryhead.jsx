@@ -9,7 +9,7 @@ const Serviceshead = () => {
             className="elementor-column elementor-col-100 col-md-8"
             style={{
               padding: "100px 0",
-              fontFamily: "'Brygada 1918', serif",
+              fontFamily: "'Brygada 1918', serif",  
               fontSize: "48px",
             }}
           >

@@ -1,4 +1,9 @@
-
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  width: 100%;
+}
 
 
 /* Navabrs */
@@ -538,5 +543,347 @@ h4 {
 }
 
 .anna-nagar-gallery img:hover {
+  transform: scale(1.05);
+}
+/* RA puram  */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* blog */
+.blog-card:hover {
+  -webkit-transform: scale(1.05) rotate(2deg);
+  transform: scale(1.05) rotate(2deg);
+  opacity: 0.8;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+
+/* contact section */
+.contact-section {
+  padding: 40px 20px;
+  background: #f8f8f8;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-section h2,
+h4 {
+  margin-bottom: 20px;
+  color:#205b4f;
+  font-size: 3rem;
+  font-family: 'Brygada 1918', serif;
+}
+
+.contact-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.contact-box .icon {
+  font-size: 20px;
+  margin-right: 12px;
+  color: #90A93E;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.enquiry-form button {
+  background-color: #90A93E;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.contact-box h6{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+    margin-bottom: 4px;
+    color: #205B4F;
+      font-family: 'Brygada 1918', serif;
+
+}
+
+ booking 
+/* .booking-page {
+  display: flex;
+  padding: 2rem;
+  font-family: sans-serif;
+  gap: 2rem;
+  background: #fffaf4;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.options button {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+}
+
+.options button.active,
+.options button:hover {
+  background: #f38120;
+  color: white;
+  border-color: #f38120;
+}
+
+.right-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.right-panel input,
+.right-panel select {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background: #f38120;
+  color: white;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #d5670a;
+}
+
+/*  */
+.location-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}  
+
+.booking-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.branch-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.branch-card {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  width: 120px;
+  transition: all 0.3s ease;
+}
+
+.branch-card:hover,
+.branch-card.active {
+  border-color: #4caf50;
+  background-color: #f1fff1;
+}
+
+.branch-name {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.branch-img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.options button {
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #f8f8f8;
+}
+
+.options button.active,
+.options button:hover {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input,
+form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+/*  */
+.options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.options button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options button.active {
+  background-color: #90a93e;
+  color: white;
+  border: 2px solid #90a93e;
+}
+
+.gender-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  object-fit: contain;
+}
+
+/* rooms */
+.room-options {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.room-card {
+  border: 2px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  width: 120px;
+}
+
+.room-card.active {
+  border-color: #90a93e;
+  box-shadow: 0 0 10px #90a93e;
+}
+
+.room-img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.room-card:hover {
   transform: scale(1.05);
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+function Footer  ()  {
   return (
     <footer className="site-footer custom-footer-bg " id="colophon" itemScope itemType="" itemID="#colophon">
       <div className="container py-4 text-white">

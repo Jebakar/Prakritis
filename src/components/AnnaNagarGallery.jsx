@@ -1,12 +1,19 @@
 import React from "react";
 
+import annanagar1 from "../Images/annanagar1.jpg"
+import annanagar2 from "../Images/annanagar2.jpg"
+import annanagar3 from "../Images/annanagar3.jpg"
+import annanagar4 from "../Images/annanagar4.jpg"
+import annanagar5 from "../Images/annanagar5.jpg"
+import annanagar6 from "../Images/annanagar6.jpg"
 const annaNagarImages = [
-  "https://prakritiayurveda.com/wp-content/uploads/2022/12/gallery-16.jpg",
-  "https://prakritiayurveda.com/wp-content/uploads/2022/12/gallery-17.jpg",
-  "https://prakritiayurveda.com/wp-content/uploads/2022/12/gallery-12.jpg",
-  "https://prakritiayurveda.com/wp-content/uploads/2022/12/gallery-13.jpg",
-  "https://prakritiayurveda.com/wp-content/uploads/2022/12/gallery-14.jpg",
-  "https://prakritiayurveda.com/wp-content/uploads/2022/12/gallery-15.jpg"
+    annanagar1,
+    annanagar2,
+    annanagar3,
+    annanagar4,
+    annanagar5,
+    annanagar6
+ 
 ];
 
 const AnnaNagarGallery = () => {

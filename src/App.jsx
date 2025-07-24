@@ -11,6 +11,10 @@ import Gender from './components/Gender';
 import Ourteampage from './Pages/Ourteam';
 import Services from './Pages/Services';
 import Gallery from './Pages/Gallery';
+import BlogList from './components/BlogList';
+import Contact from './Pages/Contact';
+import { Book } from 'lucide-react';
+import Booked from './components/Booking';
 
 function App() {
   return (
@@ -23,6 +27,9 @@ function App() {
         <Route path="/team" element={<Ourteampage />}/>
         <Route path="/services" element={<Services />}/>
         <Route path="/gallery" element={<Gallery />}/>
+        <Route path="/blog" element={<BlogList />}/>
+        <Route path="/contact" element={<Contact />}/>
+        <Route path="/book" element={<Booked />}/>
         <Route path="/" element={<Home/>
         
         } />
@@ -31,6 +38,7 @@ function App() {
         {/* <Route path="/banner" element={<Banner />} /> */}
         <Route path='/BookingPage' element={<BookingPage/>}/>
         <Route path='/Gender' element={<Gender/>}/>
+        
         
         {/* Other components can be added here as needed */}
       </Routes>

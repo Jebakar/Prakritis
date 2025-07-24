@@ -30,7 +30,7 @@ const images = [
 
 const GalleryImages = () => {
   return (
-    <section className="gallery-section py-5">
+    <section className="gallery-section py-5 mt-5">
       <div className="container">
         <div className="row">
           {images.map((imgUrl, index) => (
