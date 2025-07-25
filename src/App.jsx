@@ -14,7 +14,7 @@ import Gallery from './Pages/Gallery';
 import BlogList from './components/BlogList';
 import Contact from './Pages/Contact';
 import { Book } from 'lucide-react';
-import Booked from './components/Booking';
+import Booked from './components/Booked';
 
 function App() {
   return (
@@ -29,16 +29,14 @@ function App() {
         <Route path="/gallery" element={<Gallery />}/>
         <Route path="/blog" element={<BlogList />}/>
         <Route path="/contact" element={<Contact />}/>
-        <Route path="/book" element={<Booked />}/>
+        <Route path="/book" element={<Booking/>}/>
         <Route path="/" element={<Home/>
         
         } />
         <Route path='/Booking' element={<Booking/>}/>
         {/* Example: If you want a separate route for Banner */}
         {/* <Route path="/banner" element={<Banner />} /> */}
-        <Route path='/BookingPage' element={<BookingPage/>}/>
-        <Route path='/Gender' element={<Gender/>}/>
-        
+     
         
         {/* Other components can be added here as needed */}
       </Routes>

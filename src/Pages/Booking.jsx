@@ -1,9 +1,9 @@
 import React from 'react'
-import Places from '../components/Places'
+import Booked from '../components/Booked'
 
 const Booking = () => {
   return (
-    <div><Places/></div>
+    <div><Booked/></div>
   )
 }
 
