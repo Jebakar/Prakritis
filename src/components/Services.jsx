@@ -1,6 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
+import { useNavigate } from "react-router-dom";
+
 
 import Abhyanga from "../Images/Abhyanga.jpg";
 import Abhyangastream from "../Images/Abhyanga-with-Steam.jpeg";
@@ -56,6 +58,7 @@ const treatments = [
 ];
 
 function Services() { 
+  const navigate = useNavigate();
   return ( 
     <section className="py-5 bg-light">
       <div className="container">
@@ -97,10 +100,11 @@ function Services() {
                     <strong>Duration: {item.duration}</strong>
                   </p>
                   <a
-                    href="#"
+                    href="/book"
                     className="btn btn-dark"
-                    target="_blank"
+                    // target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => navigate("/book")}
                   >
                     Book Now
                   </a>

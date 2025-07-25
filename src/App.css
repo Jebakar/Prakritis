@@ -874,12 +874,12 @@ form select {
 
 .room-card.active {
   border-color: #90a93e;
-  box-shadow: 0 0 10px #90a93e;
+  box-shadow: 0 0 10px #90a93e; 
 }
 
 .room-img {
-  width: 100px;
-  height: 80px;
+  width: 100px; 
+  height: 80px; 
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 8px;

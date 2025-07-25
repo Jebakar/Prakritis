@@ -93,7 +93,7 @@ const Booked = () => {
       case 2: return gender && timeSlot;
       case 3: return form.name && form.phone && form.treatment;
       default: return false;
-    }
+    } 
   };
 
   return (

@@ -1,13 +1,13 @@
-import BlogList from "../components/BlogList";
-import Footer from "../components/Footer";
+import BlogList from "../components/BlogList"; 
+import Footer from "../components/Footer";  
 import React from "react";
-function Blog(){
-    return( 
+function Blog(){ 
+    return(  
         <div> 
-            <BlogList /> 
-            <Footer /> 
+            <BlogList />              
+            <Footer />   
 
-        </div> 
-    ) 
-}
-export default Blog; 
+        </div>      
+    )   
+} 
+export default Blog;      
