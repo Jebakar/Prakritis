@@ -1,9 +1,12 @@
 import React from 'react'
 import Booked from '../components/Booked'
+import Footer from '../components/Footer'
 
 const Booking = () => {
   return (
-    <div><Booked/></div>
+    <div><Booked/>
+    <Footer />
+    </div>
   )
 }
 
