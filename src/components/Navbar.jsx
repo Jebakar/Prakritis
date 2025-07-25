@@ -15,7 +15,7 @@ function Navbars() {
       case "GALLERY": return "/gallery";
       case "BLOG": return "/blog";
       case "CONTACT": return "/contact";
-      case "BOOK NOW": return "/book";
+      case "BOOK NOW": return "/Booking";
       default: return "/";
     }
   };
@@ -76,7 +76,7 @@ function Navbars() {
             className={`w-100 ${isOpen ? "d-block" : "d-none"} d-md-flex align-items-center justify-content-between mt-3 mt-md-0`}
           >
             {/* Nav Items */}
-            <ul className="nav flex-column flex-md-row text-center text-md-start mb-0 mx-md-auto">
+            <ul className="nav flex-column flex-md-row text-center text-md-start text-lg mb-0 mx-md-auto">
               {navItems.map((item) => (
                 <li className="nav-item" key={item}>
                   <a

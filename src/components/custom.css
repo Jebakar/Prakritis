@@ -1,0 +1,71 @@
+/* custom.css */
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.bg-primary {
+  background-color:rgba(229, 63, 38, 0.6) !important;
+}
+
+.text-primary {
+  color: rgba(229, 63, 38, 0.6) !important;
+}
+
+.border-primary {
+  border-color: rgba(229, 63, 38, 0.6)  !important;
+}
+
+.hover-border-primary:hover {
+  border-color: rgba(229, 63, 38, 0.6)  !important;
+}
+
+.scale-100 {
+  transform: scale(1);
+}
+
+.scale-95 {
+  transform: scale(0.95);
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.pe-none {
+  pointer-events: none;
+}
+.step-icon {
+  width: 48px;
+  height: 48px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scale-up {
+  transform: scale(1.15);
+}
+
+.step-label {
+  transition: color 0.3s ease;
+}
+
+.step-connector {
+  width: 32px;
+  height: 4px;
+  border-radius: 999px;
+  transition: background-color 0.3s ease;
+}

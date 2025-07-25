@@ -4,7 +4,7 @@ const BookingForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    gender: "Male",
+    
     phone: "",
     email: "",
     address: "",
@@ -53,28 +53,7 @@ const BookingForm = () => {
           onChange={handleChange}
           required
         />
-        <div className="flex gap-4">
-          <label>
-            <input
-              type="radio"
-              name="gender"
-              value="Male"
-              checked={formData.gender === "Male"}
-              onChange={handleChange}
-            />
-            <span className="ml-1">Male</span>
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="gender"
-              value="Female"
-              checked={formData.gender === "Female"}
-              onChange={handleChange}
-            />
-            <span className="ml-1">Female</span>
-          </label>
-        </div>
+    
         <input
           type="text"
           name="phone"

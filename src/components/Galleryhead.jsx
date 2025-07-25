@@ -1,8 +1,11 @@
 import React from "react";
 
-const Serviceshead = () => {
+const Galleryhead = ({ item = "Gallery" }) => {
   return (
-    <section className="elementor-section py-2  "style={{backgroundColor:"#90A93E"}} >
+    <section
+      className="elementor-section py-2"
+      style={{ backgroundColor: "#90A93E" }}
+    >
       <div className="elementor-container container">
         <div className="elementor-row row justify-content-center text-center">
           <div
@@ -16,7 +19,7 @@ const Serviceshead = () => {
             <div className="elementor-widget-wrap">
               <div className="elementor-element elementor-widget-heading mb-2">
                 <h6 className="elementor-heading-title text-uppercase text-white">
-                 Visual look
+                  Visual look
                 </h6>
               </div>
               <div className="elementor-element elementor-widget-heading mt-3">
@@ -27,7 +30,7 @@ const Serviceshead = () => {
                     fontFamily: "'Brygada 1918', serif",
                   }}
                 >
-                Gallery
+                  {item}
                 </h1>
               </div>
             </div>
@@ -38,4 +41,4 @@ const Serviceshead = () => {
   );
 };
 
-export default Serviceshead;
+export default Galleryhead;

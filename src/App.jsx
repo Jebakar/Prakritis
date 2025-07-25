@@ -15,6 +15,7 @@ import BlogList from './components/BlogList';
 import Contact from './Pages/Contact';
 import { Book } from 'lucide-react';
 import Booked from './components/Booked';
+import SlotBooking from './components/SlotBooking';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
         {/* <Route path="/banner" element={<Banner />} /> */}
      
         
+        <Route path='/BookingPage' element={<BookingPage/>}/>
+        <Route path='/Gender' element={<Gender/>}/>
+          <Route path='/slotbooking' element={<SlotBooking/>}/>
         {/* Other components can be added here as needed */}
       </Routes>
     </Router>

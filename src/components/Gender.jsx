@@ -8,19 +8,16 @@ const placeData = [
   {
     name: "Male",
     image: male,
-    route: "/Gender/kerala",
+    route: "/slotbooking",
   },
   {
     name: "Female",
     image: female,
-    route: "/Gender/himalaya",
+    route: "/slotbooking",
   },
-
 ];
-
 const Gender = () => {
   const navigate = useNavigate();
-
   return (
     <div className="container ">
       <h1 className="text-center my-5 text-green-500">Explore Our Wellness Retreats</h1>
@@ -44,5 +41,4 @@ const Gender = () => {
     </div>
   );
 };
-
 export default Gender;
