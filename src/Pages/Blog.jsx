@@ -5,7 +5,7 @@ function Blog(){
     return(  
         <div> 
             <BlogList />              
-            <Footer />   
+            <Footer />    
 
         </div>      
     )   

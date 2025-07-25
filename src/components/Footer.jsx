@@ -9,9 +9,9 @@ function Footer  ()  {
           {/* Quick Links */}
           <div className="col-md-3 mb-4">
             <h5>Quick Links</h5>
-            <ul className="list-unstyled mt-4">
+            <ul className="list-unstyled mt-4"> 
               <li><a href="">Home</a></li>
-              <li><a href="">About</a></li>
+              <li><a href="">About</a></li> 
               <li><a href="">Team</a></li>
               <li><a href="">Services</a></li>
               <li><a href="">Career</a></li>
@@ -24,17 +24,17 @@ function Footer  ()  {
           </div>
 
           {/* Services */}
-          <div className="col-md-3 mb-4">
-            <h5>Services</h5>
-            <ul className="list-unstyled mt-4">
+          <div className="col-md-3 mb-4"> 
+            <h5>Services</h5> 
+            <ul className="list-unstyled mt-4"> 
               <li><a href="">Abhyanga</a></li>
-              <li><a href="">Abhyanga with Steam</a></li>
-              <li><a href="">Abhyanga with Sirodhara</a></li>
-              <li><a href="">Pada Abhyanga</a></li>
-              <li><a href="">Varnya</a></li>
-              <li><a href="">Dandruff and Hairfall</a></li>
-            </ul>
-          </div>
+              <li><a href="">Abhyanga with Steam</a></li> 
+              <li><a href="">Abhyanga with Sirodhara</a></li> 
+              <li><a href="">Pada Abhyanga</a></li> 
+              <li><a href="">Varnya</a></li>  
+              <li><a href="">Dandruff and Hairfall</a></li>  
+            </ul>  
+          </div> 
 
           {/* Anna Nagar Branch */}
           <div className="col-md-3 mb-4">
@@ -56,15 +56,15 @@ function Footer  ()  {
         </div>
 
         {/* Below Footer */}
-        <div className="row border-top pt-3 mt-3">
+        <div className="row border-top pt-3 mt-3"> 
           <div className="col-md-6 text-center text-md-start">
             <p className="mb-0">© 2025 Prakriti Ayurvedic Care | All Rights Reserved.</p>
           </div>
           <div className="col-md-6 text-center text-md-end">
-            <p className="mb-0">
+            <p className="mb-0 " style={{color:"lightblue"}}>
               Developed by{" "}
               <a href="" target="_blank" rel="noopener noreferrer">
-                Leveetech eCommerce Services Pvt Ltd
+                Samruva Technologies Private Limited 
               </a>
             </p>
           </div>
