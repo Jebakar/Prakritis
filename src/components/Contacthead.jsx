@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 
 const Contacthead = () => {
   return (
@@ -31,6 +32,7 @@ const Contacthead = () => {
           Location
         </h1>
       </div>
+     
     </section>
   );
 };

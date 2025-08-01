@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'animate.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+// import '@fortawesome/fontawesome-free/css/all.min.css';
 import Navbars from './components/Navbar';
 import Home from './Pages/Home';
 import Aboutpage from './Pages/About';

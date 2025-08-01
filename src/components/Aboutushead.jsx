@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./Header";
 
 const Abouthead = () => {
   return (
@@ -15,6 +16,7 @@ const Abouthead = () => {
           </div>
         </div>
       </div>
+      <Header/>
     </section>
   );
 };

@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
+    "@tailwindcss/vite": "^4.1.11",
     "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.7",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.23.6",
@@ -24,6 +26,7 @@
     "react-icons": "^5.5.0",
     "react-modal": "^3.16.3",
     "react-router-dom": "^7.7.0",
+    "react-swiper": "^0.1.5",
     "swiffy-slider": "^1.6.0",
     "swiper": "^11.2.10"
   },

@@ -1,12 +1,13 @@
 import React from 'react'
 import Booked from '../components/Booked'
-import Footer from '../components/Footer'
+import Gallery from './Gallery'
+import Galleryhead from '../components/Galleryhead'
 
 const Booking = () => {
   return (
-    <div><Booked/>
-    <Footer />
-    </div>
+    <div>
+      <Galleryhead item="Book Your Ayurvedic Treatment" item2="Experience authentic Ayurveda in our serene centers" />
+      <Booked/></div>
   )
 }
 

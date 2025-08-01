@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./Header";
 
 const Ourteam = () => {
   return (
@@ -16,6 +17,7 @@ const Ourteam = () => {
           </div>
         </div>
       </div>
+      <Header/>
     </section>
   );
 };

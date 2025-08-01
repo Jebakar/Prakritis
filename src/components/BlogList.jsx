@@ -3,6 +3,7 @@ import BlogCard from "./BlogCard";
 import onam from "../Images/onam.webp"
 import newyear from "../Images/newyear.png"
 import christmas from "../Images/christmas.png"
+import Header from "./Header";
 
 const blogs = [ 
   {
@@ -36,6 +37,7 @@ const BlogList = () => {
           ))}
         </div>
       </div>
+      <Header />
     </section>
   );
 };

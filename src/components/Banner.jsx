@@ -14,6 +14,7 @@ function Banner() {
           id="carouselExampleFade"
           className="carousel slide carousel-fade p-0"
           data-bs-ride="carousel"
+            data-bs-interval="5000" 
         >
           {/* Carousel Indicators */}
           <div className="carousel-indicators">

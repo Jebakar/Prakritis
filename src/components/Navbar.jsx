@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Logo from "../Images/prakriti-logo.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Navbars() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const path = (item) => {
@@ -31,7 +32,7 @@ function Navbars() {
     "BOOK NOW",
   ];
 
-  return ( 
+  return (
     <>
       {/* Top Line */}
       <div style={{ backgroundColor: "lightgray", height: "1px", width: "100%" }}></div>
@@ -44,11 +45,11 @@ function Navbars() {
           <div className="me-3">
             <a href="/">
               <img
-                src={Logo} 
+                src={Logo}
                 alt="Prakriti Ayurveda"
-                width="200" 
-                height="70" 
-                className="img-fluid" 
+                width="200"
+                height="70"
+                className="img-fluid"
                 style={{ maxWidth: "190px" }}
               />
             </a>
@@ -77,25 +78,31 @@ function Navbars() {
           >
             {/* Nav Items */}
             <ul className="nav flex-column flex-md-row text-center text-md-start text-lg mb-0 mx-md-auto">
-              {navItems.map((item) => (
-                <li className="nav-item" key={item}>
-                  <a
-                    href="#"
-                    className="nav-link px-2"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      navigate(path(item));
-                      setIsOpen(false);
-                    }}
-                    style={{
-                      color: item === "HOME" ? "#b0d152" : "black",
-                      fontWeight: "600",
-                    }}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {navItems.map((item) => {
+                const itemPath = path(item);
+                const isActive = location.pathname === itemPath;
+
+                return (
+                  <li className="nav-item" key={item}>
+                    <a
+                      href="#"
+                      className="nav-link px-2"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        navigate(itemPath);
+                        setIsOpen(false);
+                      }}
+                      style={{
+                        color: isActive ? "#b0d152" : "black",
+                        fontWeight: isActive ? "700" : "600",
+                        textDecoration: isActive ? "underline" : "none",
+                      }}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
 
             {/* Button */}
