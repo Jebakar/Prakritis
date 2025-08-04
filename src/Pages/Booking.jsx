@@ -6,7 +6,7 @@ import Galleryhead from '../components/Galleryhead'
 const Booking = () => {
   return (
     <div>
-      <Galleryhead item="Book Now" item2="Experience authentic Ayurveda in our serene centers" />
+      {/* <Galleryhead item="Book Now" item2="Experience authentic Ayurveda in our serene centers" /> */}
       <Booked/></div>
   )
 }

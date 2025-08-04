@@ -69,7 +69,7 @@ function Banner() {
                   <div className="elementor-slide-description" style={{ fontSize: "1.2rem", margin: "1rem 0" }}>
                     "We are authorized dealers of medicines of Kottakkal Arya Vaidya Sala"
                   </div>
-                  <a href="" className="btn btn-light bg-transparent text-white">
+                  <a href="/Booking" className="btn btn-light bg-transparent text-white">
                     Book Now
                   </a>
                 </div>
@@ -118,7 +118,7 @@ function Banner() {
                   <div className="elementor-slide-description" style={{ fontSize: "1.2rem", margin: "1rem 0" }}>
                     Basic ayurvedic synchronized massage using medicated oil infused with essence of <br /> 46 herbs specially formulated for prakriti clients.                   
                   </div>
-                  <a href="#" className="btn btn-light bg-transparent text-white ">
+                  <a href="/Booking" className="btn btn-light bg-transparent text-white ">
                    Book Now
                   </a>
                 </div>
@@ -167,7 +167,7 @@ function Banner() {
                   <div className="elementor-slide-description" style={{ fontSize: "1.2rem", margin: "1rem 0" }}>
                     Dhara - Dripping of fluids in a rhythmic way on the forehead is done after Abhyanga, <br /> the nervous system is calmed and strengthened. 
                   </div>
-                  <a href="#" className="btn btn-light bg-transparent text-white">
+                  <a href="/Booking" className="btn btn-light bg-transparent text-white">
                     Book Now
                   </a>
                 </div>

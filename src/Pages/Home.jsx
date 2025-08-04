@@ -8,12 +8,8 @@ import CustomerReviews from '../components/CustomerReviews'
 import Services from '../components/Services'
 import IMages from '../components/images'
 import Footer from '../components/Footer'
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-
-
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });

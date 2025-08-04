@@ -1,4 +1,4 @@
-@import "tailwindcss"
+@import "tailwindcss";
 /* Custom animations */
 @keyframes fade-in {
   from {
