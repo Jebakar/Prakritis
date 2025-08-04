@@ -72,37 +72,39 @@ const Booked = () => {
   const treatments = ["Abhyanga", "Shirodhara", "Panchakarma", "Swedish Massage", "Deep Tissue"];
 
   const slots = [
-    { label: "ForeNoon", values: ["09:00 - 10:30", "10:30 - 12:00", "12:00 - 1:30"] },
-    { label: "AfterNoon", values: ["01:30 - 3:00", "03:00 - 4:30", "04:30 - 5:00"] },
+    { label: "Timing", values: ["09:00", "10:30 ", "12:00","01:30", "03:00", "04:30"] },
+    // { label: "AfterNoon", values: ["01:30", "03:00", "04:30"] },
   ];
 
   return (
     <div className="min-vh-100 bg-light">
       <div className="container py-5">
         <div className="row g-4 justify-content-center">
+
           {/* Branch Selection */}
           <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up">
-            <div className="card border-0 shadow h-100">
-              <div className="card-header bg-primary text-white text-center py-3">
+            <div className="card border-0 shadow h-100 rounded-4">
+              <div className="card-header bg-primary text-white text-center py-3 rounded-top-4">
                 <MapPin className="me-1" /> Choose Branch
               </div>
-              <div className="card-body p-3">
+              <div className="card-body p-3 cursor-pointer"  >
                 {branches.map((branch) => (
                   <div
                     key={branch.name}
-                    className={`card mb-3 p-2 border ${
-                      location === branch.name ? "border-primary shadow-lg" : "border-light"
-                    } cursor-pointer`} 
+                    className={`card mb-3 p-2 rounded-3 border cursor-pointer ${
+                      location === branch.name ? "border-primary shadow" : "border-light"
+                    }`} 
                     onClick={() => setLocation(branch.name)}
-                    style={{ transition: "all 0.3s" }}
+                    style={{ transition: "all 0.3s ease" }}
                   >
                     <div className="d-flex">
                       <img src={branch.image} alt={branch.name} className="rounded me-3" style={{ width: 60, height: 60, objectFit: "cover" }} />
                       <div>
-                        <h6 className="mb-1">{branch.name}</h6>
-                        <small className="text-muted">{branch.address}</small>
+                        <h6 className="mb-1 fw-bold">{branch.name}</h6>
+                        <small className="text-muted d-block mb-1">{branch.address}</small>
                         <div className="d-flex align-items-center">
-                          <Star className="text-warning" size={16} /><small className="ms-1 fw-bold">{branch.rating}</small>
+                          <Star className="text-warning" size={16} />
+                          <small className="ms-1 fw-bold">{branch.rating}</small>
                         </div>
                       </div>
                     </div>
@@ -114,34 +116,37 @@ const Booked = () => {
 
           {/* Date Picker + Gender */}
           <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div className="card border-0 shadow h-100">
-              <div className="card-header bg-primary text-white text-center py-3">
+            <div className="card border-0 shadow h-100 rounded-4">
+              <div className="card-header bg-primary text-white text-center py-3 rounded-top-4">
                 <Calendar className="me-2" /> Select Date
               </div>
               <div className="card-body">
-                <DatePicker
-                  selected={selectedDate}
-                  onChange={(date) => {
-                    setSelectedDate(date);
-                    setTimeSlot("");
-                  }}
-                  inline
-                  minDate={new Date()}
-                  className="w-100"
-                />
-                <div className="mt-4">
+                <div className="rounded p-3 d-flex justify-content-center mb-4 bg-white ">
+                  <DatePicker
+                    selected={selectedDate}
+                    onChange={(date) => {
+                      setSelectedDate(date);
+                      setTimeSlot("");
+                    }}
+                    inline
+                    minDate={new Date()}
+                    className="w-auto"
+                  />
+                </div>
+                <div className="border rounded p-3 bg-white">
                   <label className="form-label fw-bold">Gender</label>
-                  <div className="row g-2">
+                  <div className="row g-2 mt-2">
                     {[{ value: "Male", icon: <User /> }, { value: "Female", icon: <UserCheck /> }].map((g) => (
                       <div className="col-6" key={g.value}>
                         <button
                           type="button"
-                          className={`btn w-100 d-flex align-items-center justify-content-center border ${
+                          className={`btn w-100 d-flex align-items-center justify-content-center border rounded py-2 ${
                             gender === g.value ? "btn-outline-primary" : "btn-outline-secondary"
                           }`}
                           onClick={() => setGender(g.value)}
                         >
-                          {g.icon} <span className="ms-2">{g.value}</span>
+                          {g.icon}
+                          <span className="ms-2">{g.value}</span>
                         </button>
                       </div>
                     ))}
@@ -152,40 +157,39 @@ const Booked = () => {
           </div>
 
           {/* Time Slots */}
-       <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-  <div className="card border-0 shadow h-100">
-    <div className="card-header bg-primary text-white text-center py-3">
-      <Clock className="me-2" /> Select Time
-    </div>
-    <div className="card-body">
-      {slots.map((slotGroup) => (
-        <div className="mb-3" key={slotGroup.label}>
-          <h6 className="fw-semibold mb-2">{slotGroup.label}</h6>
-          <div className="d-flex flex-wrap gap-2">
-            {slotGroup.values.map((slot) => (
-              <button
-                key={slot}
-                type="button"
-                className={`btn ${
-                  timeSlot === slot ? "btn-outline-primary" : "btn-outline-secondary"
-                }`}
-                onClick={() => setTimeSlot(slot)}
-              >
-                {slot}
-              </button>
-            ))}
+          <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div className="card border-0 shadow h-100 rounded-4">
+              <div className="card-header bg-primary text-white text-center py-3 rounded-top-4">
+                <Clock className="me-2" /> Select Time
+              </div>
+              <div className="card-body">
+                {slots.map((slotGroup) => (
+                  <div className="mb-3" key={slotGroup.label}>
+                    <h6 className="fw-semibold mb-2">{slotGroup.label}</h6>
+                    <div className="d-flex flex-wrap gap-2">
+                      {slotGroup.values.map((slot) => (
+                        <button
+                          key={slot}
+                          type="button"
+                          className={`btn ${
+                            timeSlot === slot ? "btn-outline-primary" : "btn-outline-secondary"
+                          }`}
+                          onClick={() => setTimeSlot(slot)}
+                        >
+                          {slot}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
-
 
           {/* Form */}
           <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-            <div className="card border-0 shadow h-100">
-              <div className="card-header bg-primary text-white text-center py-3">
+            <div className="card border-0 shadow h-100 rounded-4">
+              <div className="card-header bg-primary text-white text-center py-3 rounded-top-4">
                 <Users className="me-2" /> Your Details
               </div>
               <div className="card-body">
@@ -206,6 +210,7 @@ const Booked = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

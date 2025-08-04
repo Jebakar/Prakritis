@@ -63,7 +63,7 @@ function Footer  ()  {
           <div className="col-md-6 text-center text-md-end">
             <p className="mb-0 " style={{color:"lightblue"}}>
               Developed by{" "}
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.samruvatech.com/" target="_blank" rel="noopener noreferrer">
                 Samruva Technologies Private Limited 
               </a>
             </p>
