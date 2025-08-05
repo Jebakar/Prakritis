@@ -43,11 +43,6 @@ function Services() {
         <h2 className="text-center fw-bold mb-4 text-warning">Lifestyle Consultation</h2>
         <LifestyleConsultation />
       </section>
-
-      {/* Footer */}
-      <div data-aos="fade-up" data-aos-delay="400">
-        <Footer />
-      </div>
     </div>
   );
 }

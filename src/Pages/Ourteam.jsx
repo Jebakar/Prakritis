@@ -30,10 +30,7 @@ function Ourteampage() {
         <Team />
       </section>
 
-      {/* Footer */}
-      <div data-aos="fade-up" data-aos-delay="100">
-        <Footer />
-      </div>
+
     </div>
   );
 }

@@ -36,9 +36,7 @@ function Aboutpage() {
         <AryaVaidyaSala />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="300">
-        <Footer />
-      </div>
+    
     </div>
   );
 }

@@ -30,6 +30,7 @@ function Navbars() {
     "BLOG",
     "CONTACT",
     "BOOK NOW",
+    
   ];
 
   return (

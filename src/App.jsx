@@ -16,6 +16,10 @@ import Contact from './Pages/Contact';
 import { Book } from 'lucide-react';
 import Booked from './components/Booked';
 import SlotBooking from './components/SlotBooking';
+import CustomerFeedback from './components/CustomerFeedback';
+import Footer from './components/Footer';
+import CaseSheet from './components/CaseSheet';
+import AdminAppointments from './components/AdminAppoiment';
 
 function App() {
   return (
@@ -37,13 +41,18 @@ function App() {
         <Route path='/Booking' element={<Booking/>}/>
         {/* Example: If you want a separate route for Banner */}
         {/* <Route path="/banner" element={<Banner />} /> */}
-     
+     <Route path='/CustomerFeedback' element={<CustomerFeedback/>}/>
         
         <Route path='/BookingPage' element={<BookingPage/>}/>
         <Route path='/Gender' element={<Gender/>}/>
           <Route path='/slotbooking' element={<SlotBooking/>}/>
+        <Route path='/CaseSheet' element={<CaseSheet/>}/>
+        <Route path='/AdminAppointments' element={<AdminAppointments/>}/>
         {/* Other components can be added here as needed */}
       </Routes>
+       <div data-aos="fade-up" data-aos-delay="300">
+        <Footer />
+      </div>
     </Router>
   );
 }

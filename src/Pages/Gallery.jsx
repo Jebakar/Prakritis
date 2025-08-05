@@ -43,10 +43,7 @@ function Gallery() {
         <RAPuramGallery />
       </section>
 
-      {/* Footer */}
-      <div data-aos="fade-up">
-        <Footer />
-      </div>
+    
     </div>
   );
 }

@@ -26,7 +26,7 @@ const Home = () => {
       <div data-aos="fade-left"><AppointmentSection /></div>
       <div data-aos="fade-up"><CustomerReviews /></div>
       <div data-aos="zoom-in-up"><IMages /></div>
-      <Footer />
+      
     </div>
   );
 };

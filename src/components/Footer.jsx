@@ -10,16 +10,16 @@ function Footer  ()  {
           <div className="col-md-3 mb-4">
             <h5>Quick Links</h5>
             <ul className="list-unstyled mt-4"> 
-              <li><a href="">Home</a></li>
-              <li><a href="">About</a></li> 
-              <li><a href="">Team</a></li>
-              <li><a href="">Services</a></li>
-              <li><a href="">Career</a></li>
-              <li><a href="">Gallery</a></li>
-              <li><a href="">Book Now</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">Customer Feedback</a></li>
-              <li><a href="">Case Sheet</a></li>
+              <li><a href="/Home">Home</a></li>
+              <li><a href="/About">About</a></li> 
+              <li><a href="/ourteam">Team</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/">Career</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/Booking">Book Now</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/CustomerFeedback">Customer Feedback</a></li>
+              <li><a href="/CaseSheet">Case Sheet</a></li>
             </ul>
           </div>
 
