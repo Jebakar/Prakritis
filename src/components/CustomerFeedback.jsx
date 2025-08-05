@@ -79,18 +79,18 @@ const CustomerFeedback = () => {
         ].map(({ label, name }) => (
           <div key={name}>
             <p className="mb-2 font-medium text-lg text-gray-700">{label}</p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 py-2 px-4">
               {["Below Expectation", "Satisfactory", "Expectation"].map((val) => (
-                <label key={val} className="flex items-center gap-2 text-gray-600">
+                <label key={val} className="flex items-center gap-3 text-gray-600">
                   <input
                     type="radio"
                     name={name}
                     value={val}
                     checked={formData[name] === val}
                     onChange={handleChange}
-                    className="accent-blue-500 transition-transform scale-110"
+                    className="accent-blue-500 transition-transform scale-110 py-1"
                   />
-                  <span className="hover:underline hover:text-blue-600 transition-all duration-200">
+                  <span className="hover:underline hover:text-blue-600 transition-all duration-200 px-2 py-1 rounded-md ">
                     {val}
                   </span>
                 </label>
@@ -154,7 +154,8 @@ const CustomerFeedback = () => {
         <div className="text-center">
           <button
             type="submit"
-            className="bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg active:scale-95"
+            className=" transition-colors duration-300 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg active:scale-95"
+            style={{ backgroundColor: "#90A93E" }}  
           >
             Submit Feedback
           </button>

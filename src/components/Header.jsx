@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Header() {
   return (
-    <div className="container-fluid py-2 bg-white border-bottom">
+    <div className="container-fluid py-3 bg-white border-bottom">
       <div
         className="d-flex justify-content-center align-items-center overflow-auto"
         style={{

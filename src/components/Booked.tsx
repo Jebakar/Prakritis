@@ -107,10 +107,11 @@ const Booked = () => {
       {/* Hero Section */}
       <div className="bg-primary text-white py-5">
         <div className="container text-center py-4">
-          <h1 className="display-5 fw-bold mb-3" data-aos="fade-down">Book Your Appointment</h1>
-          <p className="lead mb-4" data-aos="fade-down" data-aos-delay="100">
+            <p className="lead mb-4" data-aos="fade-down" data-aos-delay="100">
             Experience the ancient healing of Ayurveda at our wellness centers
           </p>
+          <h1 className="display-5 fw-bold mb-3" data-aos="fade-down">BOOK NOW</h1>
+        
           
           {/* Navigation Tabs */}
           <div className="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-delay="200">
@@ -346,9 +347,10 @@ const Booked = () => {
                     
                     <button 
                       type="submit" 
-                      className={`btn btn-primary btn-lg mt-3 py-1 fw-bold d-flex align-items-center justify-content-center ${
+                      className={` btn-lg mt-3 py-1 fw-bold d-flex align-items-center justify-content-center rounded-full${
                         isSubmitting ? 'disabled' : ''
                       }`} 
+                      style={{ backgroundColor: '#90A93E', color: '#fff' }}
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -483,7 +485,7 @@ const Booked = () => {
       </div>
 
       {/* Custom CSS */}
-      <style jsx>{`
+      <style>{`
         .hover-scale {
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }

@@ -31,6 +31,9 @@ const Galleryhead = ({ item,item2 }) => {
         >
          {item}
         </h1>
+        <a href="/AdminAppointments" className="btn btn-light mt-4 px-4 py-2" style={{ fontWeight: "600" }}>
+        Admin Appointments
+        </a>
       </div>
      
     </section>

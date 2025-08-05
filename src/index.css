@@ -1,5 +1,9 @@
 @import "tailwindcss";
 /* Custom animations */
+/* Global font */
+body {
+  font-family: 'Brygada 1918', serif;
+}
 @keyframes fade-in {
   from {
     opacity: 0;
