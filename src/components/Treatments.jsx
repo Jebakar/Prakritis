@@ -78,7 +78,7 @@ const SpecialTreatments = () => {
   return (
     <section className="py-5">
       <div className="container text-center">
-        <h2 className="mb-4" style={{ fontSize: "48px", fontFamily: "'Brygada 1918', serif" }}>
+        <h2 className="mb-4 border" style={{ fontSize: "48px", fontFamily: "'Brygada 1918', serif" }}>
           Special Treatments
         </h2>
         <div className="row mt-5">

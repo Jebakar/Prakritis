@@ -32,7 +32,7 @@ function AppointmentSection() {
         <div className="row justify-content-center">
           <div className="col-auto">
             <a
-              href=""
+              href="/Booking"
               className="btn btn-success  d-inline-flex align-items-center gap-2" 
             >
               

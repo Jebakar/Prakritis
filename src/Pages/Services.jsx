@@ -27,20 +27,23 @@ function Services() {
       </div>
 
       {/* Ayurveda Therapies */}
-      <section className="container py-5" data-aos="fade-up" data-aos-delay="100">
-        <h2 className="text-center fw-bold mb-4 text-success">Ayurveda Therapies</h2>
+      <section className="container " data-aos="fade-up" data-aos-delay="100">
+    <h2 className="text-center fw-bold mb-6 py-5 text-success font-serif " style={{ fontFamily: "'EB Garamond', serif", fontSize: "3rem" }}>
+  Ayurveda Therapies
+</h2>
+
         <AyurvedaTherapies />
       </section>
 
       {/* Special Treatments */}
-      <section className="container py-5" data-aos="fade-up" data-aos-delay="200">
-        <h2 className="text-center fw-bold mb-4 text-primary">Special Treatments</h2>
+      <section className="container " data-aos="fade-up" data-aos-delay="200">
+      
         <SpecialTreatments />
       </section>
 
       {/* Lifestyle Consultation */}
       <section className="container py-5" data-aos="fade-up" data-aos-delay="300">
-        <h2 className="text-center fw-bold mb-4 text-warning">Lifestyle Consultation</h2>
+      
         <LifestyleConsultation />
       </section>
     </div>
