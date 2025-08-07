@@ -78,7 +78,7 @@ function Navbars() {
             className={`w-100 ${isOpen ? "d-block" : "d-none"} d-md-flex align-items-center justify-content-between mt-3 mt-md-0`}
           >
             {/* Nav Items */}
-            <ul className="nav flex-column flex-md-row text-center text-md-start text-lg mb-0 mx-md-auto">
+            <ul className="nav flex-column flex-md-row text-center text-md-start text-sm mb-0 mx-md-auto">
               {navItems.map((item) => {
                 const itemPath = path(item);
                 const isActive = location.pathname === itemPath;

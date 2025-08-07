@@ -28,15 +28,15 @@ function Services() {
 
       {/* Ayurveda Therapies */}
       <section className="container " data-aos="fade-up" data-aos-delay="100">
-    <h2 className="text-center fw-bold mb-6 py-5 text-success font-serif " style={{ fontFamily: "'EB Garamond', serif", fontSize: "3rem" }}>
+    {/* <h2 className="text-center fw-bold mb-6 py-5 text-success font-serif " style={{ fontFamily: "'EB Garamond', serif", fontSize: "3rem" }}>
   Ayurveda Therapies
-</h2>
+</h2> */}
 
         <AyurvedaTherapies />
       </section>
 
       {/* Special Treatments */}
-      <section className="container " data-aos="fade-up" data-aos-delay="200">
+      <section className="bg-gray-200" data-aos="fade-up" data-aos-delay="200">
       
         <SpecialTreatments />
       </section>

@@ -1,7 +1,6 @@
 import React from 'react'
 import Booked from '../components/Booked'
-import Gallery from './Gallery'
-import Galleryhead from '../components/Galleryhead'
+
 
 const Booking = () => {
   return (

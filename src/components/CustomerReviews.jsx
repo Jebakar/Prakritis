@@ -5,18 +5,18 @@ import review3 from "../Images/review3.png";
 import review4 from "../Images/review4.png";
 import review5 from "../Images/review5.png";
 import review6 from "../Images/review6.png";
-import star from "../Images/star.svg"; // Your custom star image
+import star from "../Images/star.svg";
 
 const slides = [
-  { id: "slide1", image: review1, name: "Mohan Balagopal", date: "2022-05-24" ,content :"Good place for quality Ayurvedic medicine." },
-  { id: "slide2", image: review2, name: "Partha Sarathy", date: "2022-05-16",content :"Good hospitality" },
-  { id: "slide3", image: review3, name: "Aneesh Deepak", date: "2022-02-19" , content :"Excellent service and value for money" },
-  { id: "slide4", image: review4, name: "Sivaganesh Rajagopal", date: "2022-01-22" ,content :"Great Doctor, wonderful and warm experience from start to finish." },
-  { id: "slide5", image: review5, name: "Sijo Thomas", date: "2022-07-24" ,content :"Very good treatment 👍👍👍" },
-  { id: "slide6", image: review6, name: "Crazyy Ind", date: "2022-12-31" ,content: "Good Ayurveda clinic"},
+  { id: "slide1", image: review1, name: "Mohan Balagopal", date: "2022-05-24", content: "Good place for quality Ayurvedic medicine." },
+  { id: "slide2", image: review2, name: "Partha Sarathy", date: "2022-05-16", content: "Good hospitality" },
+  { id: "slide3", image: review3, name: "Aneesh Deepak", date: "2022-02-19", content: "Excellent service and value for money" },
+  { id: "slide4", image: review4, name: "Sivaganesh Rajagopal", date: "2022-01-22", content: "Great Doctor, wonderful and warm experience from start to finish." },
+  { id: "slide5", image: review5, name: "Sijo Thomas", date: "2022-07-24", content: "Very good treatment 👍👍👍" },
+  { id: "slide6", image: review6, name: "Crazyy Ind", date: "2022-12-31", content: "Good Ayurveda clinic" },
 ];
 
-const groupSlides = (slides, chunkSize = 3) => { 
+const groupSlides = (slides, chunkSize = 3) => {
   const groups = [];
   for (let i = 0; i < slides.length; i += chunkSize) {
     groups.push(slides.slice(i, i + chunkSize));
@@ -35,16 +35,10 @@ const CustomerReviews = () => {
 
   return (
     <div className="container py-5">
-      {/* Customer Reviews Heading */}
-      <div className="elementor-element elementor-element-594c486 elementor-widget elementor-widget-heading" data-id="594c486" data-element_type="widget" data-widget_type="heading.default">
-        <div className="elementor-widget-container text-center mb-4">
-          <h2 className="elementor-heading-title elementor-size-default">
-            Customer Reviews
-          </h2>
-        </div>
+      <div className="text-center mb-4">
+        <h2 className="text-3xl font-bold">Customer Reviews</h2>
       </div>
 
-      {/* Review Slider */}
       <div
         className="swiffy-slider slider-nav-autoplay slider-nav-visible slider-nav-outside slider-indicators-round slider-nav-animation slider-nav-animation-fadein"
         style={{ "--swiffy-slider-nav-light": "#fff" }}
@@ -52,46 +46,36 @@ const CustomerReviews = () => {
         <ul className="slider-container">
           {slideGroups.map((group, idx) => (
             <li key={idx}>
-              <div className="row">
+              <div className="flex flex-wrap justify-center gap-4">
                 {group.map((slide) => (
-                  <div key={slide.id} className="col-md-4">
-                    <div className="p-3 bg-light border text-center rounded">
+                  <div key={slide.id} className="w-full md:w-1/3 px-2">
+                    <div className="p-4 bg-gray-50 border text-center rounded shadow">
                       <img
                         src={slide.image}
-                        alt={slide.id}
-                        className="img-fluid rounded"
-                        style={{ maxHeight: "200px" }}
+                        alt={`Review from ${slide.name}`}
+                        className="mx-auto rounded max-h-48 object-cover"
+                        loading="lazy"
                       />
-                      <div className="ti-profile-details mt-3">
-                        <div className="ti-name fw-bold">{slide.name}</div>
-                        <div className="ti-date text-muted" style={{ fontSize: "14px" }}>
-                          {slide.date}
-                        </div>
+                      <div className="mt-3">
+                        <div className="font-bold">{slide.name}</div>
+                        <div className="text-gray-500 text-sm">{slide.date}</div>
 
-                        {/* Stars & Verification below the date */}
-                        <div className="mt-2">
-                          <div className="ti-stars">
-                            {[...Array(5)].map((_, i) => (
-                              <img
-                                key={i}
-                                className="ti-star mx-1"
-                                src={star} // Custom star image
-                                alt="star"
-                                width="17"
-                                height="17"
-                                loading="lazy"
-                              />
-                            ))}
-                          </div>
-                          <div className="ti-verified-review ti-verified-platform mt-1">
-                            <span
-                              className="ti-verified-tooltip"
-                              style={{ width: "195px" }}
-                            >
-                             {slide.content}
-                            </span>
-                          </div>
+                        <div className="mt-2 flex justify-center">
+                          {[...Array(5)].map((_, i) => (
+                            <img
+                              key={i}
+                              className="mx-0.5"
+                              src={star}
+                              alt="star"
+                              width="17"
+                              height="17"
+                              loading="lazy"
+                            />
+                          ))}
                         </div>
+                        <p className="mt-2 text-gray-700 text-sm">
+                          {slide.content}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -101,11 +85,9 @@ const CustomerReviews = () => {
           ))}
         </ul>
 
-        {/* Navigation Buttons */}
         <button type="button" className="slider-nav"></button>
         <button type="button" className="slider-nav slider-nav-next"></button>
 
-        {/* Indicators */}
         <ul className="slider-indicators">
           {slideGroups.map((_, index) => (
             <li key={index} className={index === 0 ? "active" : ""}></li>

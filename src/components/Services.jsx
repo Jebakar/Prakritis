@@ -65,7 +65,7 @@ function Services() {
         {/* Heading Section */}
         <div className="text-center mb-5 animate__animated animate__fadeInUp">
           <h2 className="fw-bold">Services</h2>
-          <div className="mt-3">
+          <div className="mt-3 d-flex justify-content-center">
             <img
               src={HeadingIcon} 
               alt="Decorative Separator"

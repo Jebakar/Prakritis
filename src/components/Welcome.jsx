@@ -10,7 +10,7 @@ const PrakritiIntroSection = () => {
             <h3 className=" welcome">Welcome to our</h3>
             <h2 className="display-5 fw-bold mb-3 eb-garamond">Prakriti Ayurveda</h2>
 
-            <div className="mb-3">
+            <div className="mb-3 d-flex justify-content-center">
               <img
                 src={bs}
                 alt="separator"

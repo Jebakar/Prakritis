@@ -20,7 +20,6 @@ import {
   Mail,
   MessageSquare,
 } from "lucide-react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./custom.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -31,53 +30,36 @@ AOS.init({
   once: true
 });
 
-interface FormData {
-  name: string;
-  phone: string;
-  email: string;
-  treatment: string;
-}
-
-interface Branch {
-  name: string;
-  image: string;
-  address: string;
-  rating: number;
-}
-
 const Booked = () => {
   const [location, setLocation] = useState("");
   const [gender, setGender] = useState("");
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [selectedDate, setSelectedDate] = useState(null);
   const [timeSlot, setTimeSlot] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [form, setForm] = useState<FormData>({ name: "", phone: "", email: "", treatment: "" });
+  const [form, setForm] = useState({ name: "", phone: "", email: "", treatment: "" });
   const [activeTab, setActiveTab] = useState("booking");
 
   useEffect(() => {
-    // Smooth scroll to top when component mounts
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
+
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    
-    // Show success modal
+
     const modal = document.getElementById('successModal');
     if (modal) {
       modal.classList.add('show');
       modal.style.display = 'block';
       document.body.classList.add('modal-open');
     }
-    
+
     setIsSubmitting(false);
   };
 
@@ -90,7 +72,7 @@ const Booked = () => {
     }
   };
 
-  const branches: Branch[] = [
+  const branches = [
     { name: "Anna Nagar", image: annanagar, address: "123 Anna Nagar, Chennai", rating: 4.8 },
     { name: "RA Puram", image: RARuran, address: "456 RA Puram, Chennai", rating: 4.9 },
     { name: "Katupakkam", image: kattupakkam, address: "789 Katupakkam, Chennai", rating: 4.7 },
@@ -102,11 +84,12 @@ const Booked = () => {
     { label: "Available Slots", values: ["09:00 AM", "10:30 AM", "12:00 NOON", "01:30 PM", "03:00 PM", "04:30 PM"] },
   ];
 
+
   return (
     <div className="min-vh-100 bg-light">
       {/* Hero Section */}
-      <div className="bg-primary text-white py-5">
-        <div className="container text-center py-4">
+      <div className="bg-primary text-white py-5 ">
+        <div className="container text-center py-4 ">
             <p className="lead mb-4" data-aos="fade-down" data-aos-delay="100">
             Experience the ancient healing of Ayurveda at our wellness centers
           </p>
@@ -194,7 +177,7 @@ const Booked = () => {
                   </div>
                 </div>
                 <div className="card-body">
-                  <div className="rounded p-3 d-flex justify-content-center mb-4 bg-white shadow-sm">
+                  <div className="rounded p-0 d-flex justify-content-center mb-2 bg-white shadow-sm">
                     <DatePicker
                       selected={selectedDate}
                       onChange={(date) => {
