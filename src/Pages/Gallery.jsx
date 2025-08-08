@@ -34,7 +34,7 @@ function Gallery() {
       </section>
 
       {/* Anna Nagar Gallery */}
-      <section className="container py-5" data-aos="fade-right">
+      <section className="bg-gray-100 py-5" data-aos="fade-right">
         <AnnaNagarGallery />
       </section>
 

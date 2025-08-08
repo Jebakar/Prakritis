@@ -36,7 +36,7 @@ function Services() {
       </section>
 
       {/* Special Treatments */}
-      <section className="bg-gray-200" data-aos="fade-up" data-aos-delay="200">
+      <section className="bg-gray-100" data-aos="fade-up" data-aos-delay="200">
       
         <SpecialTreatments />
       </section>

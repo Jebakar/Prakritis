@@ -3,11 +3,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import bs from "../Images/bs-banner-t-icon-1.png"
 const PrakritiIntroSection = () => {
   return (
-    <section className="py-5 bg-light text-center animate__animated animate__fadeInUp">
+    <section className="py-5 text-center animate__animated animate__fadeInUp">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-10">
-            <h3 className=" welcome">Welcome to our</h3>
+            <h3 className="welcome">Welcome to our</h3>
             <h2 className="display-5 fw-bold mb-3 eb-garamond">Prakriti Ayurveda</h2>
 
             <div className="mb-3 d-flex justify-content-center">

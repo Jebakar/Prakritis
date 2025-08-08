@@ -20,19 +20,19 @@ function Aboutpage() {
         <Header />
       </div>
 
-      <div data-aos="zoom" className="">
+      <div data-aos="zoom" className="bg-gray-100">
         <Galleryhead item="About Us" item2="Know More About Us" />
       </div>
 
-      <div data-aos="fade-up" className="container py-4">
+      <div data-aos="fade-up" className="container py-4  ">
         <Swasthasya />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="100" className="container py-4">
+      <div data-aos="fade-up" data-aos-delay="100" className=" py-4 bg-gray-100">
         <PrakritiUSP />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="200" className="container py-4">
+      <div data-aos="fade-up" data-aos-delay="200" className="container py-4 bg-light">
         <AryaVaidyaSala />
       </div>
 

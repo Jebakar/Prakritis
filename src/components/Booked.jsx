@@ -239,7 +239,7 @@ const Booked = () => {
                 <div className="card-header bg-primary text-white text-center py-3">
                   <div className="d-flex align-items-center justify-content-center">
                     <Clock className="me-2" size={20} /> 
-                    <span>Select Time</span>
+                    <span>Choose Appoinments</span>
                   </div>
                 </div>
                  <div className="card-body p-3">

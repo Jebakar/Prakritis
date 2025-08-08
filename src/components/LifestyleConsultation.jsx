@@ -8,7 +8,7 @@ const LifestyleConsultation = () => {
       <div className="container">
         {/* Heading */}
         <div className="text-center mb-4">
-          <h2 className="fw-bold border" style={{fontFamily:"'Brygada 1918',serif", fontSize:"48px"}}>Lifestyle Consultation</h2>
+          <h2 className="fw-bold " style={{fontFamily:"'Brygada 1918',serif", fontSize:"48px"}}>Lifestyle Consultation</h2>
         </div>
 
         {/* Content Section */}

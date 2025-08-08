@@ -3,7 +3,7 @@ import bsservice from "../Images/bs-service-image.jpg"
 
 function Swasthasya() {
   return (
-    <section className="section-wrapper">
+    <section className="section-wrapper bg-gray-100">
       <div className="row ms-5">
         {/* Left Column */}
         <div className="col left-col ">
