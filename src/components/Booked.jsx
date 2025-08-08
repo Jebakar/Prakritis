@@ -40,7 +40,6 @@ const Booked = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", email: "", treatment: "" });
   const [activeTab, setActiveTab] = useState("booking");
-
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -80,50 +79,45 @@ const Booked = () => {
     { name: "Katupakkam", image: kattupakkam, address: "789 Katupakkam, Chennai", rating: 4.7 },
   ];
 
-  const treat=[
-    {name: "Abhyangams",image:Abhyangams,description: "A full-body oil massage that rejuvenates the body and mind."},
-    {name: "Treatment",image:treatment, description: "A soothing treatment where warm oil is poured on the forehead."},
-    {name: "Consultations",image:consultation, description: "A detoxification process that cleanses the body of toxins."},
-  ]
-  const treatments = ["Abhyanga", "Shirodhara", "Panchakarma", "Swedish Massage", "Deep Tissue"];
-
-  const slots = [
-    { label: "Available Slots", values: ["09:00 AM", "10:30 AM", "12:00 NOON", "01:30 PM", "03:00 PM", "04:30 PM"] },
+  const treatmentsList = [
+    { name: "Abhyangams", image: Abhyangams, description: "A full-body oil massage that rejuvenates the body and mind." },
+    { name: "Treatment", image: treatment, description: "A soothing treatment where warm oil is poured on the forehead." },
+    { name: "Consultations", image: consultation, description: "A detoxification process that cleanses the body of toxins." },
   ];
 
+  const treatmentTypes = ["Abhyanga", "Shirodhara", "Panchakarma", "Swedish Massage", "Deep Tissue"];
 
   return (
     <div className="min-vh-100 bg-light">
       {/* Hero Section */}
-     <div className="bg-primary text-white py-5" style={{ fontFamily: "'Brygada 1918', serif" }}>
-  <div className="container text-center py-4">
-    <p className="lead mb-4" data-aos="fade-down" data-aos-delay="100">
-      Experience the ancient healing of Ayurveda at our wellness centers
-    </p>
-    <h1 className="display-5 fw-bold mb-3" data-aos="fade-down">BOOK NOW</h1>
+      <div className="bg-primary text-white py-5" style={{ fontFamily: "'Brygada 1918', serif" }}>
+        <div className="container text-center py-4">
+          <p className="lead mb-4" data-aos="fade-down" data-aos-delay="100">
+            Experience the ancient healing of Ayurveda at our wellness centers
+          </p>
+          <h1 className="display-5 fw-bold mb-3" data-aos="fade-down">BOOK NOW</h1>
 
-    {/* Navigation Tabs */}
-    <div className="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-delay="200">
-      <div className="btn-group" role="group">
-        <button 
-          type="button" 
-          className={`btn ${activeTab === 'booking' ? 'btn-light' : 'btn-outline-light'}`}
-          onClick={() => setActiveTab('booking')}
-        >
-          Book Appointment
-        </button>
-        <button 
-          type="button" 
-          className={`btn ${activeTab === 'info' ? 'btn-light' : 'btn-outline-light'}`}
-          onClick={() => setActiveTab('info')}
-        >
-          Center Information
-        </button>
+          {/* Navigation Tabs */}
+          <div className="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div className="btn-group" role="group">
+              <button 
+                type="button" 
+                className={`btn ${activeTab === 'booking' ? 'btn-light' : 'btn-outline-light'}`}
+                onClick={() => setActiveTab('booking')}
+              >
+                Book Appointment
+              </button>
+              <button 
+                type="button" 
+                className={`btn ${activeTab === 'info' ? 'btn-light' : 'btn-outline-light'}`}
+                onClick={() => setActiveTab('info')}
+              >
+                Center Information
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
 
       {activeTab === 'booking' ? (
         <div className="container py-5">
@@ -233,44 +227,39 @@ const Booked = () => {
               </div>
             </div>
 
-            {/* Time Slots */}
+            {/* Treatments */}
             <div className="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
               <div className="card border-0 shadow h-100 rounded-4 overflow-hidden">
                 <div className="card-header bg-primary text-white text-center py-3">
                   <div className="d-flex align-items-center justify-content-center">
                     <Clock className="me-2" size={20} /> 
-                    <span>Choose Appoinments</span>
+                    <span>Choose Treatment</span>
                   </div>
                 </div>
-                 <div className="card-body p-3">
-                  {treat.map((branch) => (
+                <div className="card-body p-3">
+                  {treatmentsList.map((treatment) => (
                     <div
-                      key={branch.name}
+                      key={treatment.name}
                       className={`card mb-3 p-2 rounded-3 border cursor-pointer hover-scale ${
-                        location === branch.name ? "border-primary border-2 shadow-sm" : "border-light"
+                        form.treatment === treatment.name ? "border-primary border-2 shadow-sm" : "border-light"
                       }`}
-                      onClick={() => setLocation(branch.name)}
+                      onClick={() => setForm({...form, treatment: treatment.name})}
                     >
                       <div className="d-flex">
                         <img 
-                          src={branch.image} 
-                          alt={branch.name} 
+                          src={treatment.image} 
+                          alt={treatment.name} 
                           className="rounded me-3" 
                           style={{ 
                             width: 60, 
                             height: 60, 
                             objectFit: "cover",
-                            border: location === branch.name ? "2px solid #10b981" : "none"
+                            border: form.treatment === treatment.name ? "2px solid #10b981" : "none"
                           }} 
                         />
                         <div>
-                          <h6 className="mb-1 fw-bold text-dark">{branch.name}</h6>
-                          <small className="text-muted d-block mb-1">{branch.description}</small>
-                          <div className="d-flex align-items-center">
-                            <Star className="text-warning" size={16} fill="#ffc107" />
-                            {/* <small className="ms-1 fw-bold">{branch.rating}</small> */}
-                            <small className="text-muted ms-2">({Math.floor(Math.random() * 100) + 50} reviews)</small>
-                          </div>
+                          <h6 className="mb-1 fw-bold text-dark d-flex align-items-center">{treatment.name}</h6>
+                          <small className="text-muted d-block">{treatment.description}</small>
                         </div>
                       </div>
                     </div>
@@ -338,15 +327,15 @@ const Booked = () => {
                         className="form-select border-0 border-bottom rounded-0" 
                         id="treatmentSelect"
                       >
-                        <option value=""></option>
-                        {treatments.map((t) => <option key={t} value={t}>{t}</option>)}
+                        <option value="">Select a treatment</option>
+                        {treatmentTypes.map((t) => <option key={t} value={t}>{t}</option>)}
                       </select>
                       <label htmlFor="treatmentSelect">Select Treatment *</label>
                     </div>
                     
                     <button 
                       type="submit" 
-                      className={` btn-lg mt-3 py-1 fw-bold d-flex align-items-center justify-content-center rounded-full${
+                      className={`btn btn-lg mt-3 py-1 fw-bold d-flex align-items-center justify-content-center rounded-full ${
                         isSubmitting ? 'disabled' : ''
                       }`} 
                       style={{ backgroundColor: '#90A93E', color: '#fff' }}
@@ -372,7 +361,7 @@ const Booked = () => {
         </div>
       ) : (
         <div className="container my-5">
-          <div className="row g-4">``
+          <div className="row g-4">
             {/* Branch Information */}
             {branches.map((branch, index) => (
               <div className="col-md-4" key={branch.name} data-aos="fade-up" data-aos-delay={index * 100}>
@@ -472,7 +461,7 @@ const Booked = () => {
                 <h6 className="fw-bold">Appointment Details:</h6>
                 <p className="mb-1"><strong>Location:</strong> {location}</p>
                 <p className="mb-1"><strong>Date:</strong> {selectedDate?.toLocaleDateString()}</p>
-                <p className="mb-1"><strong>Time:</strong> {timeSlot}</p>
+                <p className="mb-1"><strong>Appoiment:</strong> {}</p>
                 <p className="mb-1"><strong>Treatment:</strong> {form.treatment}</p>
               </div>
             </div>

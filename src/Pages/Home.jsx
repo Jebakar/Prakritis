@@ -48,7 +48,7 @@ const Home = () => {
         <IMages />
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
