@@ -1,34 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Brygada+1918&display=swap');
-
-/* Global font */
-body {
-  font-family: 'Brygada 1918', serif;
-}
-
-/* Force Bootstrap and form elements to use global font */
-body,
-.card,
-.card-body,
-.card-header,
-.card-footer,
-.btn,
-.form-control,
-.form-select,
-label,
-input,
-select,
-textarea,
-.modal,
-.modal-content,
-.nav,
-.tab-content,
-h1, h2, h3, h4, h5, h6,
-p,
-span,
-small {
-  font-family: 'Brygada 1918', serif !important;
-}
 
 /* Custom animations */
 @keyframes fade-in {

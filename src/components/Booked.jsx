@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import annanagar from "../Images/anna.png";
 import RARuran from "../Images/RA-Puram.png";
 import kattupakkam from "../Images/katu.jpeg";
-
+import Abhyangams from "../Images/Abhyanga-with-Steam.jpeg";
+import treatment from "../Images/service9.jpg";
+import consultation from "../Images/gallery9.jpg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {
@@ -78,6 +80,11 @@ const Booked = () => {
     { name: "Katupakkam", image: kattupakkam, address: "789 Katupakkam, Chennai", rating: 4.7 },
   ];
 
+  const treat=[
+    {name: "Abhyangams",image:Abhyangams,description: "A full-body oil massage that rejuvenates the body and mind."},
+    {name: "Treatment",image:treatment, description: "A soothing treatment where warm oil is poured on the forehead."},
+    {name: "Consultations",image:consultation, description: "A detoxification process that cleanses the body of toxins."},
+  ]
   const treatments = ["Abhyanga", "Shirodhara", "Panchakarma", "Swedish Massage", "Deep Tissue"];
 
   const slots = [
@@ -88,35 +95,35 @@ const Booked = () => {
   return (
     <div className="min-vh-100 bg-light">
       {/* Hero Section */}
-      <div className="bg-primary text-white py-5 ">
-        <div className="container text-center py-4 ">
-            <p className="lead mb-4" data-aos="fade-down" data-aos-delay="100">
-            Experience the ancient healing of Ayurveda at our wellness centers
-          </p>
-          <h1 className="display-5 fw-bold mb-3" data-aos="fade-down">BOOK NOW</h1>
-        
-          
-          {/* Navigation Tabs */}
-          <div className="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div className="btn-group" role="group">
-              <button 
-                type="button" 
-                className={`btn ${activeTab === 'booking' ? 'btn-light' : 'btn-outline-light'}`}
-                onClick={() => setActiveTab('booking')}
-              >
-                Book Appointment
-              </button>
-              <button 
-                type="button" 
-                className={`btn ${activeTab === 'info' ? 'btn-light' : 'btn-outline-light'}`}
-                onClick={() => setActiveTab('info')}
-              >
-                Center Information
-              </button>
-            </div>
-          </div>
-        </div>
+     <div className="bg-primary text-white py-5" style={{ fontFamily: "'Brygada 1918', serif" }}>
+  <div className="container text-center py-4">
+    <p className="lead mb-4" data-aos="fade-down" data-aos-delay="100">
+      Experience the ancient healing of Ayurveda at our wellness centers
+    </p>
+    <h1 className="display-5 fw-bold mb-3" data-aos="fade-down">BOOK NOW</h1>
+
+    {/* Navigation Tabs */}
+    <div className="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div className="btn-group" role="group">
+        <button 
+          type="button" 
+          className={`btn ${activeTab === 'booking' ? 'btn-light' : 'btn-outline-light'}`}
+          onClick={() => setActiveTab('booking')}
+        >
+          Book Appointment
+        </button>
+        <button 
+          type="button" 
+          className={`btn ${activeTab === 'info' ? 'btn-light' : 'btn-outline-light'}`}
+          onClick={() => setActiveTab('info')}
+        >
+          Center Information
+        </button>
       </div>
+    </div>
+  </div>
+</div>
+
 
       {activeTab === 'booking' ? (
         <div className="container py-5">
@@ -235,27 +242,36 @@ const Booked = () => {
                     <span>Select Time</span>
                   </div>
                 </div>
-                <div className="card-body">
-                  {slots.map((slotGroup) => (
-                    <div className="mb-4" key={slotGroup.label}>
-                      <h6 className="fw-semibold mb-3 text-center text-uppercase text-muted small">
-                        {slotGroup.label}
-                      </h6>
-                      <div className="d-flex flex-column gap-2">
-                        {slotGroup.values.map((slot) => (
-                          <button
-                            key={slot}
-                            type="button"
-                            className={`btn w-100 py-2 border rounded-3 fw-bold transition-all ${
-                              timeSlot === slot
-                                ? "bg-primary text-white border-primary shadow"
-                                : "bg-white text-dark border-light hover-bg-light"
-                            }`}
-                            onClick={() => setTimeSlot(slot)}
-                          >
-                            {slot}
-                          </button>
-                        ))}
+                 <div className="card-body p-3">
+                  {treat.map((branch) => (
+                    <div
+                      key={branch.name}
+                      className={`card mb-3 p-2 rounded-3 border cursor-pointer hover-scale ${
+                        location === branch.name ? "border-primary border-2 shadow-sm" : "border-light"
+                      }`}
+                      onClick={() => setLocation(branch.name)}
+                    >
+                      <div className="d-flex">
+                        <img 
+                          src={branch.image} 
+                          alt={branch.name} 
+                          className="rounded me-3" 
+                          style={{ 
+                            width: 60, 
+                            height: 60, 
+                            objectFit: "cover",
+                            border: location === branch.name ? "2px solid #10b981" : "none"
+                          }} 
+                        />
+                        <div>
+                          <h6 className="mb-1 fw-bold text-dark">{branch.name}</h6>
+                          <small className="text-muted d-block mb-1">{branch.description}</small>
+                          <div className="d-flex align-items-center">
+                            <Star className="text-warning" size={16} fill="#ffc107" />
+                            {/* <small className="ms-1 fw-bold">{branch.rating}</small> */}
+                            <small className="text-muted ms-2">({Math.floor(Math.random() * 100) + 50} reviews)</small>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -356,7 +372,7 @@ const Booked = () => {
         </div>
       ) : (
         <div className="container my-5">
-          <div className="row g-4">
+          <div className="row g-4">``
             {/* Branch Information */}
             {branches.map((branch, index) => (
               <div className="col-md-4" key={branch.name} data-aos="fade-up" data-aos-delay={index * 100}>
